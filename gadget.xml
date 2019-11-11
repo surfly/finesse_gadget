@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Module>
+  <ModulePrefs title="Surfly Finesse Gadget">
+  </ModulePrefs>
+  <Content type="html">
+     <![CDATA[
+     hello github
+     ]]>
+  </Content>
+</Module>
