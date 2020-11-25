@@ -1,11 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+This XML file does not appear to have any style information associated with it. The document tree is shown below.
+
 <Module>
-  <ModulePrefs title="Surfly Finesse Gadget">
-  </ModulePrefs>
-  <Content type="html">
-     <![CDATA[
-     hello github
-     hello
-     ]]>
-  </Content>
-</Module>
+    <ModulePrefs title="Surfly" description="Gadget to connect to Surfly Co-Browsing">
+        <Require feature="settitle"/>
+        <Require feature="dynamic-height"/>
+        <Require feature="pubsub-2"/>
+        <Require feature="setprefs"/>
+        <Require feature="loadingindicator">
+            <Param name="manual-dismiss">false</Param>
+            <Param name="loading-timeout">10</Param>
+        </Require>
+    </ModulePrefs>
+    <Content type="html">
+        <![CDATA[ 
+        <!DOCTYPE html>
+        <!-- CONFIGURATION -->
+        <script type="text/javascript"> SurflySettings = { 'surflyServer': 'SURFLY SERVER URL', 'apiKey': 'SURFLY REST API KEY', 'companyName': 'COMPANY NAME', 'companyDomain': 'COMPANY AGENT EMAIL DOMAIN' } </script>
+        <style>body { background: none transparent; padding: 0px; } #displayFrame { width:100%; height:650; border: 1px solid;}</style>
+        <script type="text/javascript" src="/desktop/assets/js/jquery.min.js"></script>
+        <script type="text/javascript" src="/desktop/assets/js/finesse.js"></script>
+        <script type="text/javascript" src="http://finesse.surfly.com/surflyCisco.js"></script>
+        <body>
+            <div id="displayOut"></div>
+        </body>
+        <script type="text/javascript"> gadgets.HubSettings.onConnect = function () { finesse.modules.SurflyGadget.init(SurflySettings.surflyServer); }; </script> ]]>
+        </Content>
+    </Module>
