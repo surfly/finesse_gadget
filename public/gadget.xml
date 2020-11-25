@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <Module>
     <ModulePrefs title="Surfly" description="Gadget to connect to Surfly Co-Browsing">
         <Require feature="settitle"/>
